@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'upperbody',
     'lowerbody',
     'accounts',
+    'embed_video',
 
 ]
 
