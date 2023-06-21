@@ -1,0 +1,23 @@
+{%extends 'base.html' %}
+{%load static %}
+{% block title %}첫화면{% endblock %}
+
+{% block content %}
+     <br/><br/>
+
+     <h1 class="display-4 fw-bold" >하체스트레칭</h1>
+     <br/><br/>
+     <div class="small text-uppercase fw-bold text-muted">하체 스트레칭 관련 문서입니다.</div>
+     <div class="bg-light py-5 border-bottom">
+          <br/><br/><br/>
+
+     <a href="{% url 'lowerbodyCreate' %}"><input class ="btn btn-primary btn-lg " type="button" value="새글작성"></a>
+     <a>|</a>
+     <a href="{% url 'lowerbodyList' %}"><input class ="btn btn-primary btn-lg " type="button" value="글 목록"></a>
+     
+     </div>
+
+     <footer class="py-5 bg-dark">
+          <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+     </footer>
+{% endblock%}

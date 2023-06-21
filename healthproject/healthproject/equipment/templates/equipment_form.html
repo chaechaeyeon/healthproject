@@ -1,0 +1,18 @@
+{%extends 'base.html' %}
+{%load static %}
+{% block title %}첫화면{% endblock %}
+
+    {% block content %}
+    <h1 class="display-4 fw-bold" >도구 사용 스트레칭 글 작성 페이지 </h1>
+    <br/><br/>
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table }} 
+        </table>
+        <input class ="btn btn-primary btn-lg " type="submit" value="글 작성">
+    
+    
+        <a href="{% url 'equipmentList' %}"> <input class ="btn btn-primary btn-lg " type ="button" value="글 목록"></a>
+{% endblock%}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}첫화면{% endblock %}
+
+{% block content %}
+    <h1 class="display-4 fw-bold" >하체스트레칭</h1>
+     <hr>
+     <div>
+        <a href="{% url 'lowerbodyCreate' %}"><input class ="btn btn-outline btn-lg px-4" type="button" value="새글작성"></a>
+        <a>|</a>
+        <a href="{% url 'lowerbodyList' %}"><input class ="btn btn-outline btn-lg px-4" type="button" value="글 목록"></a>
+        </div>
+    <div class="bg-light py-5 border-bottom">
+    <br/>
+     {% for post in posts %}
+     <a href="{% url 'lowerbodyDetail' post.id %}"> 
+    <div>
+    {{post.title}} </a>
+    {{post.body}}
+    {{post.created_at}}
+    {{post.writer}}
+    </div>
+     <hr>
+    {% endfor %} 
+        
+    <!-- 페이지네이션-->
+    {% if posts.has_previous %}
+    <a href="?page=1"><input class ="btn btn-primary btn-lg " type="button" value="처음"></a>
+    <a href="?page={{posts.previous_page_number}}"><input class ="btn btn-primary btn-lg " type="button" value="이전"></a> 
+    {% endif %}
+
+    <span> {{ posts.number }} </span> 
+    <span> / </span>
+    <span> {{ posts.paginator.num_pages }} </span> 
+    {% if posts.has_next %} 
+    <a href="?page={{posts.next_page_number}}"><input class ="btn btn-primary btn-lg " type="button" value="다음"></a>
+    <a href="?page={{posts.paginator.num_pages}}"><input class ="btn btn-primary btn-lg " type="button" value="마지막"></a>
+    {% endif %}
+    </div>
+
+    <footer class="py-5 bg-dark">
+        <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,257 @@
+{%extends 'base.html' %}
+{%load static %}
+{% block title %}첫화면{% endblock %}
+
+{% block content %}
+        
+        <!-- Features section-->
+        <section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h4 fw-bolder">UPPERBODY STRETCH</h2>
+                        <p>상체 스트레칭에 대한 게시글입니다. 목, 어깨, 허리와 같은 부위의 스트레칭을 찾아볼 수 있습니다.  </p>
+                        <a class="text-decoration-none" href="{%url 'upperbodyHome' %}">
+                            Call to action
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h4 fw-bolder">LOWERBODY STRETCH</h2>
+                        <p>하체 스트레칭에 대한 게시글입니다. 종아리, 허벅지와 같은 부위의 스트레칭을 찾아볼 수 있습니다.</p>
+                        <a class="text-decoration-none" href="{%url 'lowerbodyHome' %}">
+                            Call to action
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h4 fw-bolder">WITH EQUIPMENT</h2>
+                        <p>기구를 사용해서 하는 스트레칭에 대한 게시글입니다. 폼롤러, 땅콩볼 , 요가링 등을 사용한 스트레칭을 찾아볼 수 있습니다. </p>
+                        <a class="text-decoration-none" href="{%url 'equipmentHome' %}">
+                            Call to action
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!-- Pricing section-->
+      <section class="bg-light py-5 border-bottom">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">About Strecthing</h2>
+                <p class="lead mb-0">스트레칭에 대하여</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <!-- Pricing card enterprise-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold text-muted">스트레칭의 뜻</div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">Meanin</span>
+                                <span class="text-muted"></span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong> </strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    특정 근육 및 힘줄이나 골격관절을 의도적으로 구부리거나 늘려 근육을 이완시키고 회복 탄력성(elasticity)을 향상시키는 신체 운동의 한 형태
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    일반적으로 준비운동으로서 본 운동의 사전 운동이나 운동의 정리에서 마무리를 위해 활용
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    
+                                </li>
+                                
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!"> 더 알아보기 </a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing card free-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold text-muted">스트레칭의 효과</div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">EFFECT</span>
+                                <span class="text-muted"></span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong></strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    긴장 되어 있는 근육 이완
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    신진 대사 활성화
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    혈액의 흐름을 촉진시켜 근육 자체에 탄력성
+                                </li>
+                                <li class="mb-2 ">
+                                    <i class="bi bi-x"></i>
+                                    관절의 가동 범위를 확대해 부상을 방지하는 효과
+                                </li>
+                                <li class="mb-2 ">
+                                    <i class="bi bi-x"></i>
+                                    피로 회복 및 자세교정 효과
+                                </li>
+                              
+                      
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">더 알아보기</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pricing card pro-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                주의사항
+                            </div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">Notes</span>
+                                <span class="text-muted"></span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong></strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    자신의 몸에 맞게 하는 것이 중요하다
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    무리하면 부상 위험성이 있으므로 통증을 느낀다면 멈춰야한다
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    호흡을 유지한다
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    매일 그리고 될 수 있으면 자주 한다
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    쉬운 동작부터 시작한다
+                                </li>
+                              
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">더 알아보기</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+                    
+        <!-- Testimonials section-->
+        <section class="py-5 border-bottom">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Quote</h2>
+                    <p class="lead mb-0"> </p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- Testimonial 1-->
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">A sound mind in a sound body.</p>
+                                        <div class="small text-muted">- Decimus Iunius Iuvenalis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2-->
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">If you don’t make time for exercise, you’ll probably have to make time for illness. </p>
+                                        <div class="small text-muted">- Robin Sharma</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section class="bg-light py-5" id="accounts">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h2 class="fw-bolder">ACCOUNTS</h2>
+                    <p class="lead-mb-0"> {% if user.is_authenticated %} <a>안녕하세요!  {{ user.username }}님</a>  {%else %} WELCOME   {% endif %} </p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            
+                            <!-- Submit Button-->
+                            <div class="#">
+                            
+                            {% if user.is_authenticated %}
+                            <a  href="{% url 'accounts:logout' %}"><input class ="btn btn-primary btn-lg " type="button" value="로그아웃"></a>
+                            {% else %}
+                            <a  href="{% url 'accounts:signup' %}"><input class ="btn btn-primary btn-lg " type="button" value="회원가입"></a>
+                            <a  href="{% url 'accounts:login' %}"><input class ="btn btn-primary btn-lg " type="button" value="로그인"></a>
+                            {% endif %} 
+                        </div>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  
+{% endblock%}

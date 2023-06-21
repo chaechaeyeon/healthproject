@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}회원가입창{% endblock %}
+
+{% block content %}
+     <h1>회원가입</h1>
+     <br/>
+     <br/><br/><br/>
+     <div>
+     <form id="contactForm" class="user" method="POST">
+        {% csrf_token %}
+        <div >
+            <input  class="form-control"  type="text" name="username" placeholder="Enter Your ID">
+        </div>
+        <br/> 
+        <div>
+            <div>
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <br/>
+
+            <div>
+                <input class="form-control"  type="password" name="repeat" placeholder="Repeat Password">
+            </div>
+            <br/>
+
+        </div>
+        <br>
+        <input class="btn btn-primary btn-lg " type="submit" value="가입하기">
+
+    </form>
+    </div>
+    <footer class="py-5 bg-dark">
+        <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+    </footer>
+{% endblock %}

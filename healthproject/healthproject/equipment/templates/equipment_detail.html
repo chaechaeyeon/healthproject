@@ -1,0 +1,42 @@
+{%extends 'base.html' %}
+{%load static %}
+{% block title %}첫화면{% endblock %}
+
+{% block content %}
+     <h1 class="display-4 fw-bold" >도구 이용 스트레칭</h1>
+     <br/><br/><br/>
+     <div class="bg-light py-5 border-bottom">  
+     <h1>제목 : {{post.title}} </h1>
+     <br/>
+     <h3>작성 시간 : {{post.created_at}}</h3>
+     <hr>
+     {% if post.photo %}
+        <img src = "{{ post.photo.url }}" alt="" width="400" height="400">
+     {% endif %}
+     <p> {{post.body}}</p>    
+     <hr>
+     <a href ="{% url 'equipmentUpdate' post.id %}"><input class ="btn btn-primary btn-lg " type="button" value="수정하기"> </a> |
+     <a href ="{% url 'equipmentDelete' post.id %}"><input class ="btn btn-primary btn-lg " type="button" value="삭제하기"> </a>
+     </div>
+     <h4>댓글</h4>
+     <br/>
+     {% if user.is_authenticated %}
+     <form method="POST" action="{% url 'equipmentComment' post.id %}"> 
+          {% csrf_token %}
+          {{comment_form}}
+          <input type="submit">
+  </form>
+      {%else%}
+      댓글 기능은 로그인 후 사용해주세요. 
+      {% endif %}
+     <hr>
+     {% for comment in post.comment_set.all %}
+     <p> {{comment}} </p>
+     <a href="{% url 'equipmentUpdateComment' post.id comment.id %}">수정하기</a>
+     <a href="{% url 'equipmentDeleteComment' post.id comment.id %}"> 댓글 삭제 </a>
+     <hr>
+     {% endfor %}
+     <footer class="py-5 bg-dark">
+          <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+      </footer>
+{% endblock%}

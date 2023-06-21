@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+{%load static %}
+{% block title %}첫화면{% endblock %}
+
+    {% block content %}
+    <h1 class="display-4 fw-bold" >상체 스트레칭 새 글 작성</h1>
+    <br/><br/>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }} 
+    </table>
+    <br/>
+    <input class ="btn btn-primary btn-lg " type="submit" value="글 작성"> |
+
+    <a href="{% url 'upperbodyList' %}"><input class ="btn btn-primary btn-lg " type ="button" value="글 목록"></a>
+    
+{% endblock%}
+
+    
