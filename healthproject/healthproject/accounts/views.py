@@ -5,7 +5,8 @@ from django.contrib.auth.models import User
 def signup(request):
     if request.method == "POST":
         if request.POST['password'] == request.POST['repeat']:
-            new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
+            new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'], email=request.POST['email'],)
+          
             auth.login(request, new_user)
             print('회원가입 성공')
             return redirect('index')

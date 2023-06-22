@@ -12,6 +12,9 @@ urlpatterns = [
     path('lowerbody/',include('lowerbody.urls')),
     path('upperbody/',include('upperbody.urls')),
     path('accounts/',include('accounts.urls',namespace='accounts')),
+    path('meaning/',views.meaningPage,name="meaningPage"),
+    path('effect/',views.effectPage,name='effectPage'),
+    path('caution/',views.cautionPage,name="cautionPage"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

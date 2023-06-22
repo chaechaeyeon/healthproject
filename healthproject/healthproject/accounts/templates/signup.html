@@ -10,7 +10,7 @@
      <form id="contactForm" class="user" method="POST">
         {% csrf_token %}
         <div >
-            <input  class="form-control"  type="text" name="username" placeholder="Enter Your ID">
+            <input  class="form-control"  type="text" name="username" placeholder="Enter Your ID" >
         </div>
         <br/> 
         <div>
@@ -21,6 +21,11 @@
 
             <div>
                 <input class="form-control"  type="password" name="repeat" placeholder="Repeat Password">
+            </div>
+            <br/>
+            <div>
+                 
+                <input class="form-control"  type="email" name="email" placeholder="email">
             </div>
             <br/>
 

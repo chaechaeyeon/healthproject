@@ -9,7 +9,7 @@
      <form action ="" method ="POST">
         {% csrf_token %}
      <p>진짜 삭제하시겠습니까?!?! 글 :{{post.id}}</p>
-     <a href="{% url 'lowerbodyHome' %}">돌아가기</a>
-     <input type ="submit" value="삭제하기"> 
+     <a href="{% url 'lowerbodyHome' %}"><input class ="btn btn-primary btn-lg " type="button" value="돌아가기"></a>
+     <input class ="btn btn-primary btn-lg " type ="submit" value="삭제하기"> 
      </form>    
 {% endblock %}
