@@ -7,7 +7,7 @@ def signup(request):
         if request.POST['password'] == request.POST['repeat']:
             new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'], email=request.POST['email'],)
           
-            auth.login(request, new_user)
+            auth.login(request, new_user,  backend='django.contrib.auth.backends.ModelBackend')
             print('회원가입 성공')
             return redirect('index')
     return render(request,'signup.html')

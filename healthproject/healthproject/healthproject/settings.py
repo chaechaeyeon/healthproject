@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-5&8wwkuau0at1)qvhznnr(7s@mbp)a65_4e=rbkt^qh3_d+6(!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    #'chaechaeyeon.pythonanywhere.com'
+    ]
 
 
 # Application definition
@@ -43,8 +45,25 @@ INSTALLED_APPS = [
     'lowerbody',
     'accounts',
     'embed_video',
-
+    #'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.naver',
 ]
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+LOGIN_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
