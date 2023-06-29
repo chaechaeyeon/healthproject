@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}연락망{% endblock %}
+
+{% block content %}
+     <h1 class="display-4 fw-bold" >CONTACT</h1>
+     <br/>
+     <br/><br/>
+     <div style ='padding:10px' class="small text-uppercase fw-bold text-muted">문의사항 및 오류 발생 시 연락주세요</div>
+     
+     <div class="bg-light py-5 border-bottom">
+        <div class="big text-uppercase">
+            <a style ='padding:30px' href="#"><img src = "{% static 'icons\icons8-phone-50.png'%}"></a>
+            <a style ='padding:30px' href="mailto:'lycheese@naver.com'"><img src = "{% static 'icons\icons8-envelope-50.png'%}"></a>
+            <a style ='padding:30px' href="https://github.com/chaechaeyeon"><img src = "{% static 'icons\icons8-github-50.png'%}"></a>
+            <a style ='padding:30px' href="#"><img src = "{% static 'icons\icons8-instagram-50.png'%}"></a>
+            <a style ='padding:30px' href="https://www.linkedin.com/in/%EC%B1%84%EC%97%B0-%EC%9D%B4-354bb7231/"><img src = "{% static 'icons\icons8-linkedin-50.png'%}"></a>
+        </div>
+    </div>
+     <footer class="py-5 bg-dark">
+          <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; chaechaeyeon 2023</p></div>
+      </footer>  
+     
+{% endblock %}

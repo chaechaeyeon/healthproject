@@ -15,7 +15,11 @@ urlpatterns = [
     path('meaning/',views.meaningPage,name="meaningPage"),
     path('effect/',views.effectPage,name='effectPage'),
     path('caution/',views.cautionPage,name="cautionPage"),
+    path('contact/',views.contactPage,name="contactPage"),
+    path('recommend/',views.recommendPage,name="recommendPage"),
     path('authaccounts/', include('allauth.urls')),
+
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,3 +14,9 @@ def effectPage(request):
 def cautionPage(request):
     return render(request,"information\caution.html")
 
+def contactPage(request):
+    return render(request,"contact.html")
+
+def recommendPage(request):
+    return render(request,"recommend.html")
+
